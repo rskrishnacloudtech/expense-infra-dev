@@ -13,7 +13,7 @@ variable "common_tags" {
     Project = "expense"
     Environment = "dev"
     Terraform = "true"
-    Component = "backend"
+    Component = "frontned"
   }
 }
 

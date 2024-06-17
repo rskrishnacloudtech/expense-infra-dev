@@ -13,7 +13,7 @@ variable "common_tags" {
     Project = "expense"
     Environment = "dev"
     Terraform = "true"
-    Component = "backend"
+    Component = "web-alb"
   }
 }
 
@@ -22,5 +22,9 @@ variable "db_sg_description" {
 }
 
 variable "zone_name" {
-  default = "daws78s.online"
+  default = "expense.app"  
+}
+
+variable "zone_id" {
+  default = "<zone-id>"  
 }
