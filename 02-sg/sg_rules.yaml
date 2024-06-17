@@ -8,11 +8,7 @@
   #- expense-dev-ansible
   - expense-dev-app-alb # Backend alb
   - expense-dev-vpn
-  expense-dev-vpn:
-  - name: vpn_public
-    desc: VPN accepting connections from public
-    source: public
-    port: 943, 443, 22, 1194
+  - epense-dev-web-alb
   db:
   - name: db_backend
     desc: db accepting connections from backend.
@@ -70,6 +66,16 @@
 #    desc: frontend accepting connections from ansible.
 #    source: ansible
 #    port: 22  
+  web-alb:
+  - name: web-alb_public
+    desc: web alb accepting connections from public
+    source: public
+    port: 80
+  expense-dev-vpn:
+  - name: vpn_public
+    desc: VPN accepting connections from public
+    source: public
+    port: 943, 443, 22, 1194
   bastion:
   - name: bastion_public
     desc: bastion accepting connections from public.
